@@ -1,4 +1,4 @@
-package com;
+package com.company;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoUnit;
