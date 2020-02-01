@@ -6,15 +6,16 @@ import java.time.Month;
 public class Main {
 
     public static void main(String[] args) {
-//	NumberConverter.toBinary(256);
-//	NumberConverter.toHex( 666 );
-//	NumberConverter.toBinary( 111);
+	NumberConverter.toBinary(256);
+	NumberConverter.toHex( 666 );
+	NumberConverter.toBinary( 111);
 
 
 
+		System.out.println("\n ****************************************************************** \n");
 
 
-		Address employeeAddress = new Address("Poland", "Szczecin", "70-356", "Pocztowa",
+		Address employeeAddress = new Address("Poland ", "Szczecin ", "70-356 ", "ul. Pocztowa ",
 				48, 7);
 
 		Employee employee = new Employee("Jan",
@@ -27,29 +28,23 @@ public class Main {
 				LocalDate.of(2020, Month.JANUARY, 30)
 		);
 
-				// czy to jest metoda toString ?
-		System.out.println("employee name: " + employee.getName() +"\n" +
-				"employee surname: " + employee.getSurname() +"\n" +
-				"employee address: " + employeeAddress.getCity() +", " +
-				employeeAddress.getPostalCode() + " ul." +
-				employeeAddress.getStreet() + " " +
-				employeeAddress.getHouseNumber() + "/" +
-				employeeAddress.getFlatNumber() + "\n" +
-				"employee gender: " + employee.getGender() + "\n" +
-				"employee departement: " + employee.getDepartement() + "\n" +
-				"start of employment: " + employee.getStartOfEmployment() + "\n" +
-				"end of employment: " + employee.getEndOfEmployment());
+
+		System.out.println(employee.toString(employeeAddress.getCountry() + employeeAddress.getCity() +
+				employeeAddress.getPostalCode() + employeeAddress.getStreet() + employeeAddress.getHouseNumber() +
+				"/" + employeeAddress.getFlatNumber()));
 
 		employee.getEmploymentDuration();
 
+		System.out.println("\n ****************************************************************** \n");
 
-//		Circle circle = new Circle( 8.00, 2, 4);
-//
-//		circle.calculateArea(); // tu zwracamy pole koła
-//
-//		System.out.println("obwód koła wynosi: "+ circle.calculateCircumference()); // tu zwracamy jego obwód
-//
-//		circle.isColliding(6.00, 12,16); // tu liczymy collision ?
+
+		Circle circle = new Circle( 8.00, 2, 4);
+
+		circle.calculateArea(); // tu zwracamy pole koła
+
+		System.out.println("obwód koła wynosi: "+ circle.calculateCircumference()); // tu zwracamy jego obwód
+
+		System.out.println(circle.isColliding(6.00, 12,16)); // tu liczymy collision ?
 
 
 	}

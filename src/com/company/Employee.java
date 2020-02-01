@@ -3,7 +3,7 @@ package com.company;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class Employee {
+class Employee {
     private String name;
     private String surname;
     private Address address;
@@ -33,6 +33,16 @@ public class Employee {
         }else {
             System.out.println(name + " worked for: " + employmentDuration + " days");
         }
+    }
+
+    public String toString (String address) {
+        return "employee name: " + name +"\n" +
+                "employee surname: " + surname +"\n" +
+                "employee address: " + address + "\n" +
+                "employee gender: " + gender + "\n" +
+                "employee departement: " + departement + "\n" +
+                "start of employment: " + startOfEmployment + "\n" +
+                "end of employment: " + endOfEmployment;
     }
 
     public LocalDate getLocalDate() {

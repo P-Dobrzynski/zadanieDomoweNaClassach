@@ -1,6 +1,6 @@
 package com.company;
 
-public class NumberConverter {
+class NumberConverter {
         private static int number;
 
 

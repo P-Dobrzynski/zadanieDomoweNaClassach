@@ -1,6 +1,6 @@
 package com.company;
 
-public class Circle {
+class Circle {
     private int x, y;
     private double circleRadius;
 
@@ -22,16 +22,15 @@ public class Circle {
 
     }
 
-    public void isColliding(double cr2, int x2, int y2){
-        boolean collision = true;
-        double distance = Math.sqrt((x - x2)*(x - x2))+((y-y2)*(y - y2));
+    public boolean isColliding(double cr2, int x2, int y2){
+        double distance = Math.sqrt(Math.pow(x-x2, 2));
 
-        if ( distance < circleRadius + cr2) {
-         collision = true;
-            System.out.println("circles have collided");
+        if ( distance <= circleRadius + cr2) {
+            return true;
+
             }else {
-            collision = false;
-            System.out.println("circles have not collided");
+            return false;
+
         }
 
     }
