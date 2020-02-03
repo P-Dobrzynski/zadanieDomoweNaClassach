@@ -1,8 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-
-
 class NumberConverter {
         private static int number;
 
@@ -23,7 +20,6 @@ class NumberConverter {
 
 
      public static void toBinary2(int number) {
-         ArrayList<String> binaryArray=new ArrayList<>();
          StringBuffer sb = new StringBuffer();
 
          for (; number > 0; number=number / 2) {
