@@ -23,7 +23,7 @@ class Circle {
     }
 
     public boolean isColliding(double cr2, int x2, int y2){
-        double distance = Math.sqrt(Math.pow(x-x2, 2));
+        double distance = Math.sqrt(Math.pow(x-x2, 2) + Math.pow(y-y2, 2));
 
         if ( distance <= circleRadius + cr2) {
             return true;
