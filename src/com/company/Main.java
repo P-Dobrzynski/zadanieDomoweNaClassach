@@ -7,8 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 	NumberConverter.toBinary(256);
-	NumberConverter.toHex( 666 );
-	NumberConverter.toBinary( 111);
+	NumberConverter.toBinary2( 256);
+	NumberConverter.toHex( 123456789 );
+	NumberConverter.toHex2(123456789);
 
 
 
